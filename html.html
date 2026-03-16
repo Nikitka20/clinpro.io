@@ -1,0 +1,339 @@
+```html
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>КлинПро — Профессиональная уборка</title>
+    <!-- Подключаем шрифт Inter из Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        
+    </style>
+</head>
+
+<body>
+
+    <!-- ============================================
+         ШАПКА (HEADER)
+         ============================================ -->
+    <header class="header" id="header">
+        <div class="container header__inner">
+            <!-- Логотип -->
+            <a href="#" class="logo">
+                <div class="logo__icon">✨</div>
+                КлинПро
+            </a>
+
+            <!-- Навигация (десктоп) -->
+            <nav class="nav" id="desktopNav">
+                <a href="#hero" class="nav__link">Главная</a>
+                <a href="#features" class="nav__link">Услуги</a>
+                <a href="#pricing" class="nav__link">Цены</a>
+                <a href="#contacts" class="nav__link">Контакты</a>
+            </nav>
+
+            <!-- Кнопка заказа звонка (десктоп) -->
+            <button class="header__btn" id="openModalBtn">
+                ➕ Заказать звонок
+            </button>
+
+            <!-- Бургер-кнопка (мобильная) -->
+            <button class="burger" id="burgerBtn" aria-label="Открыть меню">
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Мобильное меню -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#hero" class="mobile-menu__link" data-close-menu>Главная</a>
+        <a href="#features" class="mobile-menu__link" data-close-menu>Услуги</a>
+        <a href="#pricing" class="mobile-menu__link" data-close-menu>Цены</a>
+        <a href="#contacts" class="mobile-menu__link" data-close-menu>Контакты</a>
+        <button class="mobile-menu__btn" id="openModalBtnMobile">➕ Заказать звонок</button>
+    </div>
+
+    <!-- ============================================
+         HERO СЕКЦИЯ
+         ============================================ -->
+    <section class="hero" id="hero">
+        <!-- Фоновое изображение -->
+        <div class="hero__bg"></div>
+        <div class="hero__overlay"></div>
+
+        <div class="container">
+            <div class="hero__content">
+                <!-- Бейдж -->
+                <div class="hero__badge">
+                    🏠 Профессиональная уборка
+                </div>
+
+                <!-- Заголовок H1 -->
+                <h1 class="hero__title">
+                    Наведём <span>чистоту</span>,<br>пока вы на работе
+                </h1>
+
+                <!-- Подзаголовок -->
+                <p class="hero__subtitle">
+                    Уборка любой сложности с гарантией 100% качества. Работаем быстро, аккуратно и без лишних вопросов.
+                </p>
+
+                <!-- Кнопки -->
+                <div class="hero__actions">
+                    <button class="btn-primary"
+                        onclick="document.getElementById('lead-form').scrollIntoView({behavior:'smooth'})">
+                        📞 Вызвать клинера
+                    </button>
+                    <a href="#pricing" class="btn-secondary">
+                        Смотреть цены →
+                    </a>
+                </div>
+
+                <!-- Статистика -->
+                <div class="hero__stats">
+                    <div>
+                        <div class="hero__stat-number">2 500+</div>
+                        <div class="hero__stat-label">Довольных клиентов</div>
+                    </div>
+                    <div>
+                        <div class="hero__stat-number">4.9 ★</div>
+                        <div class="hero__stat-label">Средняя оценка</div>
+                    </div>
+                    <div>
+                        <div class="hero__stat-number">3 года</div>
+                        <div class="hero__stat-label">На рынке</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         ПРЕИМУЩЕСТВА (FEATURES)
+         ============================================ -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-title reveal">Почему выбирают нас</h2>
+            <p class="section-subtitle reveal">Мы заботимся о каждой детали, чтобы ваш дом сиял чистотой</p>
+
+            <div class="features__grid">
+                <!-- Карточка 1 -->
+                <div class="feature-card reveal">
+                    <div class="feature-card__icon">
+                        <span>🌿</span>
+                    </div>
+                    <h3 class="feature-card__title">Без химии</h3>
+                    <p class="feature-card__text">Используем только экологичные и безопасные средства</p>
+                </div>
+
+                <!-- Карточка 2 -->
+                <div class="feature-card reveal">
+                    <div class="feature-card__icon">
+                        <span>💎</span>
+                    </div>
+                    <h3 class="feature-card__title">Без следов</h3>
+                    <p class="feature-card__text">Идеальная чистота без разводов и пятен на поверхностях</p>
+                </div>
+
+                <!-- Карточка 3 -->
+                <div class="feature-card reveal">
+                    <div class="feature-card__icon">
+                        <span>⏰</span>
+                    </div>
+                    <h3 class="feature-card__title">Точно в срок</h3>
+                    <p class="feature-card__text">Приезжаем вовремя и укладываемся в оговорённые сроки</p>
+                </div>
+
+                <!-- Карточка 4 -->
+                <div class="feature-card reveal">
+                    <div class="feature-card__icon">
+                        <span>🌸</span>
+                    </div>
+                    <h3 class="feature-card__title">Без запаха</h3>
+                    <p class="feature-card__text">Никаких резких ароматов — только свежесть и чистота</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         ТАРИФЫ (PRICING)
+         ============================================ -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2 class="section-title reveal">Наши тарифы</h2>
+            <p class="section-subtitle reveal">Прозрачные цены без скрытых доплат. Выберите подходящий вариант</p>
+
+            <div class="pricing__grid">
+                <!-- Карточка «Стандарт» -->
+                <div class="price-card reveal">
+                    <div class="price-card__name">Стандарт</div>
+                    <div class="price-card__price">3 000₽ <span>/ уборка</span></div>
+                    <p class="price-card__desc">Регулярная поддерживающая уборка для вашего дома</p>
+                    <div class="price-card__features">
+                        <div class="price-card__feature">Протирка всех поверхностей</div>
+                        <div class="price-card__feature">Мытьё полов</div>
+                        <div class="price-card__feature">Уборка кухни и санузла</div>
+                        <div class="price-card__feature">Вынос мусора</div>
+                    </div>
+                    <button class="price-card__btn price-card__btn--outline"
+                        onclick="document.getElementById('lead-form').scrollIntoView({behavior:'smooth'})">
+                        Заказать
+                    </button>
+                </div>
+
+                <!-- Карточка «Генеральная» (популярная) -->
+                <div class="price-card price-card--popular reveal">
+                    <div class="price-card__name">Генеральная</div>
+                    <div class="price-card__price">5 000₽ <span>/ уборка</span></div>
+                    <p class="price-card__desc">Глубокая уборка с вниманием к каждому уголку</p>
+                    <div class="price-card__features">
+                        <div class="price-card__feature">Всё из тарифа «Стандарт»</div>
+                        <div class="price-card__feature">Мытьё окон изнутри</div>
+                        <div class="price-card__feature">Чистка бытовой техники</div>
+                        <div class="price-card__feature">Уборка внутри шкафов</div>
+                        <div class="price-card__feature">Удаление пыли с потолков</div>
+                    </div>
+                    <button class="price-card__btn price-card__btn--filled"
+                        onclick="document.getElementById('lead-form').scrollIntoView({behavior:'smooth'})">
+                        Заказать
+                    </button>
+                </div>
+
+                <!-- Карточка «После ремонта» -->
+                <div class="price-card reveal">
+                    <div class="price-card__name">После ремонта</div>
+                    <div class="price-card__price">8 000₽ <span>/ уборка</span></div>
+                    <p class="price-card__desc">Полная уборка после строительных и ремонтных работ</p>
+                    <div class="price-card__features">
+                        <div class="price-card__feature">Всё из тарифа «Генеральная»</div>
+                        <div class="price-card__feature">Удаление строительной пыли</div>
+                        <div class="price-card__feature">Очистка от следов клея и краски</div>
+                        <div class="price-card__feature">Мытьё окон с двух сторон</div>
+                        <div class="price-card__feature">Полировка поверхностей</div>
+                    </div>
+                    <button class="price-card__btn price-card__btn--outline"
+                        onclick="document.getElementById('lead-form').scrollIntoView({behavior:'smooth'})">
+                        Заказать
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         ФОРМА ЗАХВАТА (LEAD FORM)
+         ============================================ -->
+    <section class="lead-form-section" id="lead-form">
+        <div class="container">
+            <div class="lead-form-wrapper reveal">
+                <h2 class="section-title">Оставьте заявку прямо сейчас</h2>
+                <p class="section-subtitle">Перезвоним в течение 5 минут и подберём удобное время</p>
+
+                <form class="lead-form" id="leadForm" onsubmit="handleLeadForm(event)">
+                    <div class="lead-form__row">
+                        <input type="text" class="lead-form__input" placeholder="Ваше имя" required>
+                        <input type="tel" class="lead-form__input" placeholder="Ваш телефон" required>
+                    </div>
+                    <button type="submit" class="lead-form__btn">
+                        📞 Жду звонка
+                    </button>
+                    <p class="lead-form__privacy">
+                        Нажимая кнопку, вы соглашаетесь с <a href="#">политикой конфиденциальности</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         ПОДВАЛ (FOOTER)
+         ============================================ -->
+    <footer class="footer" id="contacts">
+        <div class="container">
+            <div class="footer__inner">
+                <!-- Колонка 1: О компании -->
+                <div>
+                    <div class="footer__logo">
+                        <div class="footer__logo-icon">✨</div>
+                        КлинПро
+                    </div>
+                    <p class="footer__desc">
+                        Профессиональная уборка квартир и домов. Работаем по Москве и Московской области с 2021 года.
+                    </p>
+                </div>
+
+                <!-- Колонка 2: Контакты -->
+                <div>
+                    <h4 class="footer__title">Контакты</h4>
+                    <div class="footer__contact">
+                        <span class="footer__contact-icon">📞</span>
+                        <a href="tel:+74951234567">+7 (495) 123-45-67</a>
+                    </div>
+                    <div class="footer__contact">
+                        <span class="footer__contact-icon">📧</span>
+                        <a href="mailto:info@klinpro.ru">info@klinpro.ru</a>
+                    </div>
+                    <div class="footer__contact">
+                        <span class="footer__contact-icon">📍</span>
+                        Москва, ул. Чистая, д. 1
+                    </div>
+
+                    <!-- Соцсети -->
+                    <div class="footer__socials">
+                        <a href="#" class="footer__social-link" aria-label="Telegram">💬</a>
+                        <a href="#" class="footer__social-link" aria-label="WhatsApp">📱</a>
+                        <a href="#" class="footer__social-link" aria-label="VK">🌐</a>
+                        <a href="#" class="footer__social-link" aria-label="Instagram">📷</a>
+                    </div>
+                </div>
+
+                <!-- Колонка 3: Ссылки -->
+                <div>
+                    <h4 class="footer__title">Навигация</h4>
+                    <div class="footer__links">
+                        <a href="#hero">Главная</a>
+                        <a href="#features">Услуги</a>
+                        <a href="#pricing">Цены</a>
+                        <a href="#contacts">Контакты</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Копирайт -->
+            <div class="footer__bottom">
+                © 2024 КлинПро. Все права защищены. Сделано с ❤️ для чистоты.
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================
+         МОДАЛЬНОЕ ОКНО (Заказать звонок)
+         ============================================ -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal">
+            <button class="modal__close" id="closeModalBtn">✕</button>
+            <h3 class="modal__title">Заказать звонок</h3>
+            <p class="modal__subtitle">Оставьте номер, и мы перезвоним за 5 минут</p>
+            <form class="modal__form" id="modalForm" onsubmit="handleModalForm(event)">
+                <input type="text" class="modal__input" placeholder="Ваше имя" required>
+                <input type="tel" class="modal__input" placeholder="Ваш телефон" required>
+                <button type="submit" class="modal__btn">📞 Жду звонка</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="/javaScript.js"></script>
+
+</body>
+
+</html>
+```
